@@ -6,8 +6,8 @@ import (
 )
 
 var stdout = stdlibLogger.New(os.Stdout, "", 0)
-var stderr = stdlibLogger.New(os.Stderr, "[ERROR]", 0)
-var stdwarn = stdlibLogger.New(os.Stderr, "[WARN]", 0)
+var stderr = stdlibLogger.New(os.Stderr, "[ERROR] ", 0)
+var stdwarn = stdlibLogger.New(os.Stderr, "[WARN] ", 0)
 
 // Info is like log.Println, but outputs to stdout
 func Info(v ...any) {
