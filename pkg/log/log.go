@@ -1,13 +1,13 @@
 package log
 
 import (
-	stdlibLogger "log"
+	stdLog "log"
 	"os"
 )
 
-var stdout = stdlibLogger.New(os.Stdout, "", 0)
-var stderr = stdlibLogger.New(os.Stderr, "[ERROR] ", 0)
-var stdwarn = stdlibLogger.New(os.Stderr, "[WARN] ", 0)
+var stdout = stdLog.New(os.Stdout, "", stdLog.LstdFlags)
+var stderr = stdLog.New(os.Stderr, "[ERROR] ", stdLog.LstdFlags)
+var stdwarn = stdLog.New(os.Stderr, "[WARN] ", stdLog.LstdFlags)
 
 // Info is like log.Println, but outputs to stdout
 func Info(v ...any) {
